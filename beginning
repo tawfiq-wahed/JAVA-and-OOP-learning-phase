@@ -1,0 +1,32 @@
+//when i declare the class outside of the main file class then static and public method use in this below process:
+
+package java_methods;
+class statlevel{
+   static void multiple1(int n)
+    {
+
+        for(int i=1;i<=10;i++)
+            System.out.println(n + " X " + i + " = " + (n * i));
+    }
+}
+class publiclevel
+{
+    public  void multiple(int n)
+    {
+
+        for(int i=1;i<=10;i++)
+            System.out.println(n + " X " + i + " = " + (n * i));
+    }
+
+}
+public class tawfiq
+{
+    public static void main(String[] args)
+    {
+        publiclevel obj=new publiclevel();
+        obj.multiple(12);
+statlevel.multiple1(6);
+
+    }
+}
+
