@@ -1,0 +1,52 @@
+class Restaurant {
+    String name;
+
+    Restaurant(String name) {
+        this.name = name;
+    }
+
+    int totalbill() {
+        int k = (1000 + (1000 * 10) / 100);
+        return k;
+
+    }
+    void display()
+    {
+        System.out.println("RESTAURANT NAME: "+this.name+". TOTAL BILL OF THE CUSTOMER: "+totalbill()+" taka");
+    }
+}
+class fastfoodRestaurant extends Restaurant{
+    fastfoodRestaurant(String name)
+    {
+        super(name);
+    }
+    int totalbill() {
+        int k = (1000 + (1000 * 15) / 100);
+        return k;
+    }
+
+}
+class fineDinningRestaurant extends Restaurant{
+    fineDinningRestaurant(String name)
+    {
+        super(name);
+    }
+    int totalbill() {
+        int k = (1000 + (1000 * 10) / 100);
+        return k;
+
+    }
+}
+public class tawfiq
+{
+    public static void main(String[] args) {
+
+Restaurant first1=new Restaurant("AL-BAIK");
+fastfoodRestaurant second2=new fastfoodRestaurant("BFC");
+fineDinningRestaurant third3=new fineDinningRestaurant("Frieolento");
+first1.display();
+second2.display();
+third3.display();
+
+    }
+}
