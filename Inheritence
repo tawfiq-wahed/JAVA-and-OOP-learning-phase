@@ -50,3 +50,67 @@ third3.display();
 
     }
 }
+
+
+
+//Hierarchical Inheritance
+ class restaurant {
+     String name;
+     String location;
+     String phonenumber;
+
+     restaurant(String name, String location, String phonenumber) {
+         this.name = name;
+         this.location = location;
+         this.phonenumber = phonenumber;
+     }
+
+     int deliverytime() {
+         return 20;
+     }
+
+     void display() {
+         System.out.println("RESTAURANT NAME :" + name + " " + "LOCATION: " + location + " " + "NUMBER: " + phonenumber + " " + "DEIVERY TIME " + deliverytime());
+     }
+
+ }
+class fastfood extends restaurant{
+
+    fastfood(String name,String location,String phonenumber)
+    {
+        super(name,location,phonenumber);
+    }
+    int deliverytime()
+    {
+        return 40;
+    }
+  /* void display() {
+        System.out.println("RESTAURANT NAME :" + name + " " + "LOCATION: " + location + " " + "NUMBER: " + phonenumber + " " + "DEIVERY TIME " + deliverytime());
+    }*/
+
+}
+class finedine extends fastfood
+{
+   finedine(String name,String location,String phonenumber)
+    {
+        super(name,location,phonenumber);
+    }
+    int deliverytime()
+    {
+        return 10000;
+    }
+}
+public class tawfiq
+{
+    public static void main(String[] args)
+    {
+        restaurant normal=new restaurant("ROSHNI FOOD.","JAMALKHAN.","01815130179");
+        fastfood bfc=new fastfood("KUAR PAR.","JK.","546734");
+        finedine kfc=new finedine("dostogir .","ceragi pahar","018888888");
+
+        normal.display();
+        bfc.display();
+        kfc.display();
+    }
+}
+
