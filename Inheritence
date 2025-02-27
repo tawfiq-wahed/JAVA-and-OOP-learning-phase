@@ -53,7 +53,16 @@ third3.display();
 
 
 
+
+
+
+
+
 //Hierarchical Inheritance
+
+
+
+
  class restaurant {
      String name;
      String location;
@@ -114,7 +123,11 @@ public class tawfiq
     }
 }
 
-sir task:
+//sir task:
+
+
+
+
 class restaurant
 {protected static final double tax=0.10;
      double foodprice;
@@ -200,3 +213,98 @@ public class tawfiq
 
 }
 }
+
+
+
+
+
+
+//Exercise:8(a):INHERITENCE:
+
+
+
+
+
+class employee
+{
+  public  String name;
+  public int id;
+  public String department;
+  employee(String name,int id,String department)
+  {
+      this.name=name;
+      this.id=id;
+      this.department=department;
+  }
+
+
+  public double calculatepay()
+  {
+      return 0.0;
+  }
+  void displayinfo()
+  {
+      System.out.println("NAME: "+this.name+" ID: "+this.id+" department: "+this.department+" TOTALLY HAVE TO PAY :"+calculatepay());
+  }
+
+
+}
+class fulltimeemployee extends employee{
+    double fixedsalary;
+    fulltimeemployee(String name,int id,String department,double fixedsalary) {
+        super(name, id, department);
+        this.fixedsalary = fixedsalary;
+    }
+        public double calculatepay()
+        {
+            return fixedsalary;
+        }
+    }
+
+class parttimeemployee extends employee{double hourlyrate;
+    int hoursworked;
+    parttimeemployee(String name,int id,String department,double hourlyrate,int hoursworked)
+    {
+        super(name,id,department);;
+        this.hourlyrate=hourlyrate;
+        this.hoursworked=hoursworked;
+
+    }
+
+
+    public double calculatepay()
+    {
+        return hourlyrate*hoursworked;
+    }
+    }
+    class contractemployee extends employee{double contractamount;String projectname;
+        contractemployee(String name,int id,String department,double contractamount,String projectname)
+        {
+            super(name,id,department);;
+           this.contractamount=contractamount;
+           this.projectname=projectname;
+
+        }
+        public double calculatepay()
+        {
+            return contractamount;
+        }
+    }
+
+
+
+public class tawfiq {
+    public static void main(String[] args) {
+employee e1=new employee("TAWFIQ",10986,"SWE");
+fulltimeemployee e2=new fulltimeemployee("ABC",955,"PME",15500.00);
+parttimeemployee e3=new parttimeemployee("NBS",20202,"CIVIL",235.00,9);
+contractemployee e4=new contractemployee("dnfkherj",373863,"hijibiji",2345.05,"labor");
+e1.displayinfo();
+e2.displayinfo();
+e3.displayinfo();
+e4.displayinfo();
+    }
+}
+
+
+
