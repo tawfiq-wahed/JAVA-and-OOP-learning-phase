@@ -114,3 +114,89 @@ public class tawfiq
     }
 }
 
+sir task:
+class restaurant
+{protected static final double tax=0.10;
+     double foodprice;
+    restaurant(double foodprice)
+    {
+        this.foodprice=foodprice;
+    }
+    int deliverytime()
+    {
+        return 40;
+    }
+    double calculatebill()
+    {
+        return foodprice+foodprice*tax;
+    }
+    void calculatetotalbill()
+    {
+        System.out.println("BILL: "+calculatebill());
+    }
+    void estimatedeliverytime()
+    {
+        System.out.println(deliverytime());
+    }
+}
+class fastfood extends restaurant{
+    private double tax=0.15;
+    fastfood(double foodprice)
+    {
+        super(foodprice);
+    }
+    int deliverytime()
+    {
+        return 20;
+    }double calculatebill()
+    {
+        return foodprice+foodprice*tax;
+    }
+    void calculatetotalbill()
+    {
+        System.out.println("BILL: "+calculatebill());
+    }
+    void estimatedeliverytime()
+    {
+        System.out.println(deliverytime());
+    }
+}
+class finedine extends restaurant{
+
+    finedine(double foodprice)
+    {
+        super(foodprice);
+    }
+   public int deliverytime()
+    {
+        return 60;
+    }
+   double calculatebill()
+    {
+        return foodprice+foodprice*tax;
+    }
+    void estimatedeliverytime()
+    {
+        System.out.println(deliverytime());
+    }
+    void calculatetotalbill()
+    {
+        System.out.println("BILL: "+calculatebill());
+    }
+}
+public class tawfiq
+{
+    public  static void main(String args[])
+{
+    restaurant general=new restaurant(150);
+    fastfood fastfood1=new fastfood(100);
+    finedine finedine1=new finedine(200);
+    general.estimatedeliverytime();
+    general.calculatetotalbill();
+    fastfood1.estimatedeliverytime();
+    fastfood1.calculatetotalbill();
+    finedine1.estimatedeliverytime();
+    finedine1.calculatetotalbill();
+
+}
+}
