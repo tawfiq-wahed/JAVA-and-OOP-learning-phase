@@ -100,12 +100,73 @@ public class tawfiq
     }
 }
 
+
+
+
+//Write a program to check whether a given input is a positive integer or not.
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+       if(n>=0)System.out.println("it is positive number");
+       else System.out.println("It is not a positive number");
+    }
+}
+
+
+
+//Write a program to check whether a given input is an odd or even number.
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+       if(n%2==0)System.out.println("it is even number");
+       else System.out.println("It is a odd number");
+    }
+}
+
+
+
+// create a calculator in specific operation:
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int m =obj.nextInt();
+       int l=n*m;
+       int sum=n+m;
+       double div=(double)(n/m);
+       int sub=n-m;
+        System.out.println("addition"+" "+sum);
+        System.out.println("subtraction"+" "+sub);
+        System.out.println("multiplication"+" "+l);
+        System.out.println("division"+" "+div);
+    }
+}
+
+
+
+
 //Grade calculator
 import java.util.Scanner;
 public class tawfiq
 {
     public static void main(String[] args) {
-      int a=68;
+      Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
       if(a>=0 &&a<=39)System.out.println("F");
      else if(a>=40 &&a<=59)System.out.println("C+");
      else if(a>=60 &&a<=69)System.out.println("B");
