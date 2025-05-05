@@ -172,3 +172,31 @@ public class Main
 
     }
 }
+
+
+/coutn the number of odd and even present in array:
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner obj=new Scanner(System.in);
+      int n=obj.nextInt();
+      int[] arr=new int[n];
+      for(int i=0;i<n;i++)
+      {
+          arr[i]=obj.nextInt();
+      }
+      int odd=0,even=0;
+      for(int i=n-1;i>=0;i--)
+      {
+          if(arr[i]%2==1)odd++;
+          else even++;
+      }
+      System.out.println("NUMBER OF ODD: "+" "+odd);
+      System.out.println("NUMBER OF EVEN: "+" "+even);
+
+    }
+}
