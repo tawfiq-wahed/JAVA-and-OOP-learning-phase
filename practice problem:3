@@ -47,3 +47,43 @@ public class Main
       else System.out.println("Student will not get medal");
     }
 }
+
+
+
+//Bonus math:
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner obj=new Scanner(System.in);
+      int tsale =obj.nextInt();
+      int attendance=obj.nextInt();
+      if(tsale>=95 )
+      {
+          if(attendance==100)
+          {
+              System.out.println("BONUS:"+" "+60);
+          }
+          else if(attendance>=90)
+          {
+              System.out.println("BONUS:"+" "+40);
+          }
+      }
+      else if(tsale>=80)
+      {
+          if(attendance==100)
+          {
+              System.out.println("BONUS:"+" "+40);
+          }
+          else if(attendance>=90)
+          {
+              System.out.println("BONUS:"+" "+20);
+          }
+      }
+      else System.out.println("BONUS:"+" "+5);
+
+    }
+}
