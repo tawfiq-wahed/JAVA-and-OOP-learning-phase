@@ -1,3 +1,40 @@
+// Area of a triangle
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int base=5;
+        int height=3;
+        double area=(double)0.5*base*height;
+        System.out.println(area);
+    }
+}
+
+
+
+
+
+
+
+
+
+//Area of a volume of ball
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int r=5;
+        double pi=Math.PI;
+        double res=(double)(4*pi*Math.pow(r,3))/3;
+      System.out.println(res);
+    }
+}
+
+
+
+
 //Area of a triangle:
 import java.util.Scanner;
 public class tawfiq
