@@ -1,0 +1,31 @@
+
+class Library
+{
+    static int totalissued=0;
+    String username;
+    Library(String name)
+    {
+        this.username=name;
+    }
+    void issuebook()
+    {
+        totalissued++;
+        System.out.println("BOOK IS ISSUED");
+    }
+    static void totalbook()
+    {
+        System.out.println(totalissued);
+    }
+}
+public class Main {
+    public static void main (String [] args)
+    {
+        Library user1=new Library("ABSAR");
+        Library user2=new Library("TAWFIQ");
+        user1.issuebook();
+        user1.issuebook();
+        user2.issuebook();
+        user2.issuebook();
+        Library.totalbook();
+    }
+}
