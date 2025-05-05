@@ -35,6 +35,56 @@ public class Main
 
 
 
+
+
+//area of circle
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int radius=5;
+
+        double area=(double)Math.PI*radius*radius;
+        System.out.println(area);
+    }
+}
+
+
+// convert the celcius scale into farenhite scale
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        double celcius=99.00;
+
+        double farenhite=(double)(((celcius/5)*9)+32);
+        System.out.println(farenhite);
+    }
+}
+
+
+
+
+//area of equilateral triangle
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int arm=5;
+
+        double area=(double)(Math.sqrt(3)*arm*arm)/4;
+        System.out.println(area);
+    }
+}
+
+
 //Area of a triangle:
 import java.util.Scanner;
 public class tawfiq
