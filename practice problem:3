@@ -21,3 +21,29 @@ public class Main
         System.out.println(average);
     }
 }
+
+
+
+//STUDENT GET MEDAL OR NOT
+
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner obj=new Scanner(System.in);
+      double grade=obj.nextDouble();
+      boolean graduation_cmplt=obj.nextBoolean();
+      if(graduation_cmplt)
+      {
+          if(grade>=3.5)
+          {
+              System.out.println("Student will get medal");
+          }
+          else  System.out.println("Student will not get medal");
+      }
+      else System.out.println("Student will not get medal");
+    }
+}
