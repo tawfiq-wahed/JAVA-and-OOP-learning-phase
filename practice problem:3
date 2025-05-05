@@ -1,3 +1,5 @@
+//AVERAGE VALUE OF AN ARRAY
+
 import java.util.Scanner;
 public class Main
 {
@@ -84,6 +86,34 @@ public class Main
           }
       }
       else System.out.println("BONUS:"+" "+5);
+
+    }
+}
+
+
+
+//maximum element of the ARRAY:
+
+
+
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner obj=new Scanner(System.in);
+      int n=obj.nextInt();
+      int []arr=new int[n];
+      int max=-1000000;
+      for(int i=0;i<n;i++)
+      {
+          arr[i]=obj.nextInt();
+          if(arr[i]>max) {
+              max = arr[i];
+          }
+      }
+      System.out.println(max);
 
     }
 }
