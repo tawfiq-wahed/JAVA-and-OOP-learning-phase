@@ -25,7 +25,7 @@ finedine b=new finedine();
 b.display();//hello1
 restaurant a =new finedine();
 a.display();//hello1
-a=new restaurant();
+a=new restaurant();//change location
 a.display();//hello
 
     }
