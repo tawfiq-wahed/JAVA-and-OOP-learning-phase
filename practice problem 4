@@ -52,3 +52,46 @@ public class Main {
         }
     }
 }
+
+
+//method overloading problem:
+
+
+
+class filterproduct
+{
+    void filterproducts(String s)
+    {
+        System.out.println(s);
+    }
+    void filterproducts(int a,int b)
+    {
+        System.out.println("price range is between "+a +" to "+ b);
+    }
+    void filterproducts(String s1,String s2)
+    {
+        System.out.println(s1+ " "+s2);
+    }
+    void filterproducts(String s,int a ,int b)
+    {
+        System.out.println( "category is "+s+" price range is between "+a +" to "+ b);
+    }
+    void filterproducts(String s,int a ,int b,String brand)
+    {
+        System.out.println( "category is "+s+" price range is between "+a +" to "+ b+" brand name : "+brand);
+    }
+}
+public class Main {
+    public static void main (String [] args)
+    {
+filterproduct tawfiq=new filterproduct();
+tawfiq.filterproducts("electronics");
+tawfiq.filterproducts(100,200);
+tawfiq.filterproducts( "apple", "puma");
+tawfiq.filterproducts("electronics",100,200);
+tawfiq.filterproducts("electronics",100,200,"apple");
+
+
+
+    }
+}
