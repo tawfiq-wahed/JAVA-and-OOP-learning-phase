@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class restaurant
+{
+    void display()
+    {
+        System.out.println("hello");
+    }
+
+
+}
+class finedine extends restaurant
+{
+
+    void display()
+    {
+        System.out.println("hello1");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+finedine b=new finedine();
+b.display();//hello1
+restaurant a =new finedine();
+a.display();//hello1
+a=new restaurant();
+a.display();//hello
+
+    }
+}
