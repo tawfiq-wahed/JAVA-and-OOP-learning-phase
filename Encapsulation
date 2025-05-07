@@ -1,0 +1,27 @@
+//encapsulation
+import java.util.ArrayList;
+import java.util.Arrays;
+class teacher
+{
+    private int age=15;
+    private String name="ASIF";
+    //to make visible
+     public String getname()
+{
+    return name;
+}
+public int getage()
+{
+    return age;
+}
+}
+
+public class Main {
+    public static void main(String[] args) {
+       teacher a=new teacher();
+     // System.out.println(a.age);//data hiding encapsulation
+       // System.out.println(a.name);//data hiding encapsulation
+        System.out.println(a.getage());// expressing data of data hiding encapsulation
+        System.out.println(a.getname());// expressing data of data hiding encapsulation
+    }
+}
