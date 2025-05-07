@@ -66,3 +66,64 @@ tc.teach(st);
 
     }
 }
+
+
+//aggregation
+
+
+
+
+import java.util.List;
+import java.util.ArrayList;
+class Bk
+{
+  private  String name;
+   public Bk(String name)
+    {
+        this.name=name;
+    }
+   public String getname()
+   {
+       return name;
+   }
+}
+class library
+{
+    private String name;
+    private List<Bk>books;
+   public  library(String name)
+    {
+        this.name=name;
+        this.books=new ArrayList<>();
+    }
+
+   public void addbook(Bk b)
+   {
+       books.add(b);
+   }
+   public void showdetails()
+   {
+       for(Bk b:books)
+       {
+           System.out.println(b.getname());
+       }
+   }
+
+}
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+Bk b=new Bk("C programming");
+Bk c=new Bk("PYTHON");
+library lib=new library("SUST CL");
+lib.addbook(b);
+lib.addbook(c);
+lib.showdetails();
+
+
+
+    }
+}
