@@ -24,3 +24,36 @@ public class Main
        s1.display();
     }
 }
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        class library
+        {
+            private String booktitle;
+            private String bookauthor;
+            public library(String booktitle)
+            {
+                this.booktitle=booktitle;
+                this.bookauthor="unknown";
+                //this(booktitle,"Aman");
+            }
+            public library(String booktitle,String bookauthor)
+            {
+                this.booktitle=booktitle;
+                this.bookauthor=bookauthor;
+            }
+            public void display()
+            {
+                System.out.println("BOOK NAME: "+booktitle+"BOOK AUTHOR: "+bookauthor);
+            }
+
+        }
+    library l1=new library("species of trees");
+    l1.display();
+        library l2=new library("c programming","Aman");
+        l2.display();
+
+    }
+}
