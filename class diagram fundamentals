@@ -1,0 +1,27 @@
+//object passing through method
+
+class laptop
+{
+   public void code()
+    {
+        System.out.println("CODE IS WRITTEN!");
+    }
+}
+class developer
+{
+    public void devapp(laptop lap)
+    {
+        lap.code();
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+laptop lap=new laptop();
+developer obj =new developer();
+obj.devapp(lap);
+
+    }
+}
