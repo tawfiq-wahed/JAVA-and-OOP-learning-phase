@@ -66,3 +66,44 @@ tc.teach(st);
 
     }
 }
+
+
+
+//composition:
+
+class Engine
+{
+   private String name;
+    public Engine(String name)
+    {
+        this.name=name;
+    }
+    void start()
+    {
+        System.out.println(name +" is starting");
+    }
+}
+class car
+{
+   private String name;
+   private Engine engine;
+   public car(String name,String enginename)
+   {
+       this.name=name;
+       this.engine=new Engine(enginename);
+   }
+   void startcar()
+   {
+       System.out.println(name+ " car is starting");
+       engine.start();
+   }
+
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        car c=new car("toyota","HINO");
+        c.startcar();
+    }
+}
