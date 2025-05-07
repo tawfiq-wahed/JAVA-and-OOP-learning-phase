@@ -308,3 +308,58 @@ e4.displayinfo();
 
 
 
+
+
+8(c)
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+
+
+public class Main
+{ public static double calculate(double []cg,double[] cr)
+{
+    double s=0;
+    double total=0;
+    for(int i=0;i<cr.length;i++)
+    {
+        total+=(cg[i]*cr[i]);
+        s+=cr[i];
+    }
+    if(s==0.0)return 0.0;
+    else return (total/s);
+}
+    public static void main(String[] args)
+    {
+        final int subject=5;
+        final int student=5;
+      Scanner sc=new Scanner(System.in);
+      double [][]cg =new double[student][subject];
+      double []cr=new double[subject];
+     for(int i=0;i<subject;i++)
+     {
+         cr[i]=sc.nextDouble();
+     }
+     for(int i=0;i<student;i++)
+     {
+         for(int j=0;j<subject;j++)
+         {
+             cg[i][j]=sc.nextDouble();
+         }
+     }
+     for(int i=0;i<student;i++)
+     {
+        double cgpa=calculate(cg[i],cr);
+        System.out.println("CGPA of "+(i+1)+" student is: " + (String.format("%.2f",cgpa)));
+     }
+
+    }
+}
+
+
