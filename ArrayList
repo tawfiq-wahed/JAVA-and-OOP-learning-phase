@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+       ArrayList<String>fruits=new ArrayList<>();
+       fruits.add("banana");
+        fruits.add("mango");
+        fruits.add("orange");
+        System.out.println(fruits.get(0));
+        fruits.remove(0);
+        System.out.println(fruits);
+        for(String s:fruits)
+        {
+            System.out.println(s);
+        }
+        int n=fruits.size();
+        String []s =new String[n];
+        for(int i=0;i<n;i++)
+        {
+            s[i]=fruits.get(i);
+        }
+        for(String h:s)
+        {
+            System.out.println(h);
+        }
+        System.out.println(s);
+        ArrayList<String>hp=new ArrayList(Arrays.asList(s));
+        System.out.println(hp);
+    }
+}
