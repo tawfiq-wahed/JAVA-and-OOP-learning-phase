@@ -1,0 +1,26 @@
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+class teacher
+{
+    void show()
+    {
+        System.out.println("hellO STUDENTS");
+    }
+}
+class student extends teacher
+{
+    void show1()
+    {
+        System.out.println("GOOD MORNING TEACHER!");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       teacher a=new student();//upcasting
+       a.show();
+       student b=(student)a;//downcasting
+       b.show1();
+    }
+}
