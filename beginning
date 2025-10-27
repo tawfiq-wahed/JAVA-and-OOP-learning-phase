@@ -1,0 +1,74 @@
+//when i declare the class outside of the main file class then static and public method use in this below process:
+
+package java_methods;
+class statlevel{
+   static void multiple1(int n)
+    {
+
+        for(int i=1;i<=10;i++)
+            System.out.println(n + " X " + i + " = " + (n * i));
+    }
+}
+class publiclevel
+{
+    public  void multiple(int n)
+    {
+
+        for(int i=1;i<=10;i++)
+            System.out.println(n + " X " + i + " = " + (n * i));
+    }
+
+}
+public class tawfiq
+{
+    public static void main(String[] args)
+    {
+        publiclevel obj=new publiclevel();
+        obj.multiple(12);
+statlevel.multiple1(6);
+
+    }
+}
+
+class employee{
+    String name;
+    String department;
+    int id;
+    employee(String name,int id,String department)
+    {
+        this.name=name;
+        this.id=id;
+        this.department=department;
+    }
+    void display()
+    {
+        System.out.println("name: "+this.name+"id :"+this.id+"department :"+this.department);
+    }
+   void calculatepay()
+    {
+        System.out.println("YOU HAVE TO PAY 600");
+    }
+
+}
+class fulltimeemployee extends employee
+{
+    fulltimeemployee(String name,int id,String department)
+    {
+        super(name);
+        super(id);
+        super(department);
+    }
+}
+public class tawfiq
+{
+    public static void main(String[] args) {
+
+employee e1=new employee("tawfiq",2012,"swe");
+e1.display();
+e1.calculatepay();
+        fulltimeemployee e2=new fulltimeemployee("estiak",2015,"cse");
+        e2.display();
+        e2.calculatepay();
+
+    }
+}

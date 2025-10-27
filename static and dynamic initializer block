@@ -1,0 +1,30 @@
+class Exam
+{
+    static
+    {
+        System.out.println("static 1");
+    }
+   public Exam()
+    {
+        System.out.println("constructor asbe");
+    }
+    {
+        System.out.println("initializer 1");
+    }
+    {
+        System.out.println("initializer 2");
+    }
+    static
+    {
+        System.out.println("static 2");
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Exam em1=new Exam();
+        Exam em2=new Exam();
+
+    }
+}

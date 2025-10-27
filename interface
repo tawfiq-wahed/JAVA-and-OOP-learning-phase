@@ -1,0 +1,30 @@
+
+interface a
+{int age=25;//static and final;
+    void sleep();
+    void eat();
+}
+class b implements a{
+    public void sleep()
+    {
+        System.out.println("hey");
+    }
+   public void eat()
+    {
+        System.out.println("hello");
+    }
+
+}
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        b obj=new b();
+        obj.eat();
+        obj.sleep();
+        System.out.println(a.age);
+
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class account
+{
+    private double balance;
+    public account deposit(double amm)
+    {
+        this.balance+=amm;
+        return this;
+    }
+    public account withdraw(double amm)
+    {
+        this.balance-=amm;
+        return this;
+    }
+    public void show()
+
+    {
+        System.out.println(this.balance);
+    }
+}
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+     account ac=new account();
+     ac.show();
+     ac.deposit(2500).withdraw(1000).show();
+    }
+}
